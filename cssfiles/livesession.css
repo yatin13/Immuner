@@ -1,0 +1,119 @@
+.face {
+  display: flex;
+  margin-top: 4rem;
+  margin-left: 50rem;
+}
+.ear1 {
+  background-color: black;
+  width: 0.3rem;
+  height: 1rem;
+  color: rgb(0, 0, 0, 0);
+  border-top-left-radius: 70%;
+  border-bottom-left-radius: 70%;
+  margin-top: 2.2rem;
+}
+h1 {
+  color: blue;
+  text-align: center;
+  animation: glowup 2s ease-in infinite;
+}
+@keyframes glowup {
+  from {
+    text-shadow: 2px 2px 4px cyan;
+  }
+  to {
+    text-shadow: 2px 2px 15px cyan;
+  }
+}
+.ear2 {
+  background-color: black;
+  width: 0.2rem;
+  height: 1rem;
+  color: rgb(0, 0, 0, 0);
+  margin-top: 2.2rem;
+  border-top-right-radius: 70%;
+  border-bottom-right-radius: 70%;
+}
+.mouth {
+  background-color: black;
+  width: 5rem;
+  height: 5rem;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  border-bottom-right-radius: 3px;
+  color: rgb(0, 0, 0, 0);
+}
+.neck {
+  background-color: black;
+  width: 5rem;
+  height: 5rem;
+  margin-left: 50rem;
+}
+.images {
+  display: flex;
+  justify-content: center;
+  margin: -8rem 0 0 35rem;
+}
+.images img {
+  width: 12rem;
+  height: 9rem;
+}
+.img1 {
+  animation: showmuscle 3s ease-in-out infinite;
+}
+@keyframes showmuscle {
+  0% {
+    transform: skewY(-10deg);
+  }
+  30% {
+    transform: skewY(-16deg);
+  }
+  60% {
+    transform: skewY(-20deg);
+  }
+  100% {
+    transform: skewY(-10deg);
+  }
+}
+.img2 {
+  transform: scaleX(-1);
+  animation: showmuscle1 3s ease-in-out infinite;
+}
+@keyframes showmuscle1 {
+  0% {
+    transform: skewY(10deg) scaleX(-1);
+  }
+  30% {
+    transform: skewY(16deg) scaleX(-1);
+  }
+  60% {
+    transform: skewY(20deg) scaleX(-1);
+  }
+  100% {
+    transform: skewY(10deg) scaleX(-1);
+  }
+}
+.chest {
+  background-color: black;
+  width: 7rem;
+  height: 8rem;
+  margin-left: 49rem;
+  margin-top: -3rem;
+  border-top-right-radius: 30%;
+  border-top-left-radius: 20%;
+  color: rgb(0, 0, 0, 0);
+  border-bottom-right-radius: 40px;
+  border-bottom-left-radius: 45px;
+}
+.container {
+  margin-left: 10rem;
+}
+footer {
+  background-color: grey;
+  color: white;
+  text-align: center;
+  height: 100px;
+}
+.gif {
+  transform: translateY(300px);
+}

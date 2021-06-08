@@ -1,0 +1,116 @@
+body {
+  background-color: #b0e0e6;
+  font-family: "Roboto Slab", serif;
+  margin-left: 26%;
+  font-size: 63%;
+}
+#table {
+  background-color: white;
+  box-shadow: 2px 2px 15px #6495ed;
+  width: 60%;
+  border-radius: 30px;
+}
+#table th {
+  color: blue;
+  font-size: 1.9rem;
+  padding-left: 10px;
+}
+#table:not(.rt) {
+  font-size: 1.3rem;
+}
+table,
+td,
+tr {
+  border: 0;
+  border-collapse: collapse;
+  text-align: center;
+}
+img {
+  width: 6rem;
+  height: 5rem;
+  padding-left: 2rem;
+}
+.head {
+  display: flex;
+  margin-left: 15rem;
+  gap: 1rem;
+  color: blue;
+  font-size: 1.9rem;
+  font-weight: 550;
+}
+.head i {
+  margin-top: 1rem;
+  color: red;
+}
+#arr {
+  color: blue;
+  position: absolute;
+  margin-left: -27rem;
+  padding: 10px 0 0 0;
+  background-color: white;
+  font-size: 2.3rem;
+  width: 2.3rem;
+  height: 3rem;
+  text-align: center;
+}
+#arr:hover {
+  cursor: pointer;
+}
+.del {
+  margin-left: 20rem;
+  font-size: 2.3rem;
+  border: 2px solid white;
+  padding: 0.4rem;
+  background-color: white;
+}
+.del:hover {
+  background-color: red;
+  color: white;
+  cursor: pointer;
+}
+.del:hover::after {
+  content: attr(data);
+  position: absolute;
+  top: 4.7rem;
+  margin-left: -4rem;
+  border: 2px solid white;
+  background-color: rgb(238, 95, 95);
+  padding: 0.5rem;
+  border-radius: 20px;
+}
+.amount {
+  display: flex;
+  gap: 15rem;
+  font-size: 1.8rem;
+  color: blue;
+  font-weight: 550;
+}
+button {
+  background-color: #32cd32;
+  outline: 0 !important;
+  width: 18rem;
+  height: 3rem;
+  color: white;
+  text-align: center;
+  font-size: 1.8rem;
+  margin: 1rem 0 0 10rem;
+  border-radius: 30px;
+  border: 2px solid white;
+}
+button:hover {
+  background-color: white;
+  border: 2px solid #32cd32;
+  outline: 0 !important;
+  font-weight: 550;
+  color: #32cd32;
+}
+@media (max-width: 768px) {
+  body {
+    font-size: 55%;
+    margin-left: 10%;
+    width: 50%;
+  }
+  #table {
+    width: 10%;
+  }
+}

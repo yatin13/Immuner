@@ -1,0 +1,68 @@
+h1 {
+  font-size: 40px;
+  font-weight: 550;
+  color: blue;
+  margin: 0 0 0 28rem;
+  font-family: Georgia;
+}
+body {
+  background: linear-gradient(to bottom, #87ceeb, #87cefa, #1e90ff);
+}
+form {
+  margin: 1rem 3rem 0 4rem;
+  border: 2px solid white;
+  background-color: white;
+  width: 86%;
+  height: 25rem;
+  border-radius: 20px;
+  padding: 0 0 0 30px;
+}
+.form-content {
+  display: flex;
+  flex-wrap: wrap;
+  width: 1000px;
+}
+.form-content div:nth-child(2n) {
+  margin: -4rem 0 0 36rem;
+}
+#payment-gateway {
+  margin-left: 10rem;
+  position: absolute;
+}
+form label {
+  color: blue;
+  font-size: 22px;
+  font-weight: 510;
+  font-family: Georgia;
+  text-align: center;
+}
+form input {
+  width: 300px;
+  height: 40px;
+  border: 0;
+  outline: 0;
+  border-radius: 10px;
+  color: #1e90ff;
+  font-size: 19px;
+  border: 2px solid black;
+}
+#sub {
+  border: 2px solid #1e90ff;
+  color: #1e90ff;
+  background-color: white;
+  outline: 0;
+  width: 10rem;
+  height: 3rem;
+  margin-left: 25rem;
+  font-size: 17px;
+}
+#sub:hover {
+  border: 2px solid white;
+  background-color: #1e90ff;
+  color: white;
+  cursor: pointer;
+}
+h4 {
+  color: blue;
+  margin-left: 33rem;
+}

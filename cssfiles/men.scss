@@ -1,0 +1,308 @@
+.back
+{
+margin-top:3rem;
+text-decoration: none;
+}
+.icon-cart-group
+{
+display: flex;  
+gap:45rem;
+}
+#men-back
+{
+width:100%; 
+height:35vh;   
+margin-top:6rem ;
+}
+#num {
+  background-color: red;
+  width: 0.7rem;
+  border-radius: 30%;
+  height: 24px;
+  color: rgb(12, 2, 2);
+  font-size: 17px;
+  font-weight: 550;
+  margin:-4rem 0 0 2.5rem;
+}
+.nav-logo {
+  margin-top: 2rem;
+  width: 3rem;
+}
+.s1
+{
+margin-top:-1rem;   
+padding-left:15rem ;    
+}
+.s 
+{
+margin-top:3rem ;    
+}
+.img-prod
+{
+height:17.5rem;
+width:13rem;
+padding-left:4rem;   
+}
+.s2
+{
+padding-left:20rem ;
+margin-top: -1rem;
+}
+.men-text
+{
+margin-top: 2rem;    
+background-color:#e7f8f3 ;
+}
+.men-text h2
+{
+color:blue; 
+text-align: center;  
+text-decoration:underline;
+}
+.men-text h3
+{
+  
+color:rgb(28, 243, 243) ;     
+}
+.f 
+{
+color:rgb(67, 183, 204); 
+}
+.rev-text 
+{
+margin-left:2rem ;
+color:blue;
+font-size:20px ;   
+}
+.review-content 
+{
+border:0.5px solid rgb(23, 196, 226);
+border-radius:5px ;
+margin-left:3rem ;
+margin-right:3rem ;  
+margin-top:2.3rem ;  
+background:linear-gradient(to bottom,#cdf8ea,#e7f8f3,#b4e0f1) ;
+}
+.stars 
+{
+color:rgb(67, 183, 204);
+margin-left:18rem;
+margin-top:-2rem;
+border-left:2px solid white; 
+}
+#reviews 
+{
+margin-left:10rem;
+font-weight: 550;  
+}
+.starsGroup 
+{
+margin:2rem 0 0 25rem;  
+}
+#rev-head
+{
+margin:-4rem 0 0 20rem;
+font-size:30px ;
+}
+#reviews
+{
+padding-left:25rem;
+margin-top:-7.1rem ; 
+color:rgb(67, 183, 204);
+}
+.copyrights
+{
+background-color: grey;
+color:white;
+font-weight:550;
+font-size:20px;
+text-align: center;  
+height:6rem;
+padding-top:2.5rem ;
+}
+.write-review 
+{
+margin-left:50rem;
+}
+#sta
+{
+width:2rem;
+height:1.1rem;  
+}
+#vainsh
+{
+ display: none !important; 
+}
+.write-review button 
+{
+border:0.9px solid white; 
+margin-right:0.5rem;
+background-color:rgb(79, 212, 224) ;
+color:white;
+border-radius:20px;
+outline: 0;
+}
+.write-review button:hover{
+  background-color:white ;
+color:rgb(79, 212, 224);  
+}
+.comment label{
+    color:blue;
+    font-size:22px;
+    margin-left:1rem;
+}
+.comment input 
+{
+width:90%;
+border-radius:20px;
+height:2rem;  
+border:0.6px solid ;
+outline:0;
+}
+.comment button 
+{
+border:0.9px solid white; 
+background-color:rgb(79, 212, 224) ;
+color:white;
+width:4rem;
+border-radius:20px;
+outline: 0;
+}
+.comment button:hover{
+background-color:white ;
+color:rgb(79, 212, 224);  
+}
+.comment
+{
+border:0.4px solid rgb(6, 214, 204);
+margin-top:3rem;
+border-radius:10px ;
+padding:2rem 0  2rem 1.3rem;
+margin:0 2rem 0 2rem;
+}
+.stars2
+{
+color:blue;  
+}
+.comment input:focus
+{
+box-shadow:2px 2px 5px rgb(175, 175, 175);
+border:1px solid rgb(45, 88, 93);  
+}
+.hidden 
+{
+display: none;  
+}
+#profile  
+{
+background-color:#12e6e6;
+color:blue;
+border-radius:100%;
+border:4px solid blue;
+text-align: center;
+width:3.4rem;
+}
+.imu 
+{
+margin-left:3rem;  
+}
+.wishes
+{
+margin-left:3rem;
+color:rgb(119, 119, 246);  
+}
+.gif  
+{
+margin-left:38rem;  
+margin-top:2rem ;
+}
+.gif h4
+{
+color:blue;
+animation:inc-dec 1s ease-in infinite;  
+}
+@keyframes inc-dec {
+  from 
+  {
+   text-shadow:2px 2px 5px rgb(32, 116, 226); 
+  }
+  to 
+  {
+   text-shadow:3px 3px 15px rgb(16, 219, 209) ; 
+  } 
+}
+.diet-chart 
+{
+margin-top: -25rem; 
+}
+.already-commented li
+{
+  list-style:none;
+}
+.person
+{
+display:flex;
+gap:12px;  
+}
+.person div 
+{
+font-size:22px;
+font-weight: 550;
+color: blue;  
+}
+.comment1,.response
+{
+border:2px solid rgb(21, 216, 216);
+border-radius:20px ;
+padding:10px;
+}
+.auth 
+{
+display: flex; 
+gap:15px; 
+}
+.auth div 
+{
+font-size:22px;
+font-weight: 550;
+color: blue;    
+}
+#star-group4,#star-group3,#star-group2,#star-group1
+{
+color:rgb(13, 245, 233);  
+}
+#img8
+{
+width:2rem;
+height:2rem;  
+}
+.already-commented img 
+{
+margin-left:40rem ;  
+}
+.li-class button
+{
+ outline:0;
+ border:0;
+ background-color:#b4e0f1; 
+ color:white;
+ border-bottom:1px solid white;
+ font-size:20px;
+}
+.li-class
+{
+background-color: #b4e0f1;
+position: absolute;
+margin-left:57rem;
+margin-top:-4rem ;
+border:0.5px solid white;
+display:none;
+}
+#star-group5,#star-group4,#star-group3,#star-group2,#star-group1
+{
+  color:blue;
+}
+#sttext 
+{
+color:red;  
+}

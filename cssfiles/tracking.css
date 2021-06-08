@@ -1,0 +1,217 @@
+body {
+  font-family: "Varela Round", sans-serif;
+}
+.real-tracking {
+  margin: -10rem 0 0 10rem;
+}
+#part1 {
+  margin: -30rem 0 0 25.6rem;
+  border: 2px solid blue;
+  color: red;
+  font-size: 20px;
+  font-weight: 550;
+  padding-top: 1.2rem;
+  width: 28rem;
+  height: 5rem;
+  border-radius: 50px;
+  animation: timelinechange 2s ease-in infinite;
+  animation-delay: 1s;
+}
+@keyframes timelinechange {
+  from {
+    background-color: none;
+    box-shadow: 2px 2px 5px #7fffd4;
+  }
+  to {
+    background-color: #7fffd4;
+    box-shadow: 2px 2px 10px #e0ffff;
+  }
+}
+#ball1 {
+  margin: 0 0 0 -1.3rem;
+  background-color: cyan;
+  border: 2px solid blue;
+  width: 1.5rem;
+  color: rgb(0, 0, 0, 0);
+  height: 1.3rem;
+  border-radius: 50%;
+  position: absolute;
+  margin: 1rem 0 0 -1rem;
+  animation: ballchange 2s ease-in-out infinite;
+}
+@keyframes ballchange {
+  from {
+    background-color: cyan;
+    border: 2px solid blue;
+    padding: 3px;
+  }
+  to {
+    background-color: #87cefa;
+    border: 2px solid cyan;
+    padding: 7px;
+  }
+}
+@keyframes colorchanger {
+  from {
+    background-color: blue;
+    box-shadow: 2px 2px 5px cyan;
+  }
+  to {
+    background-color: #4169e1;
+    box-shadow: 2px 2px 10px #00bfff;
+  }
+}
+#ball2 {
+  background-color: cyan;
+  border: 2px solid blue;
+  width: 1.5rem;
+  color: rgb(0, 0, 0, 0);
+  height: 1.3rem;
+  border-radius: 50%;
+  position: absolute;
+  margin: 1rem 0 0 26.8rem;
+  animation: ballchange 2s ease-in-out infinite;
+}
+#ball3 {
+  background-color: cyan;
+  border: 2px solid blue;
+  width: 1.5rem;
+  color: rgb(0, 0, 0, 0);
+  height: 1.3rem;
+  border-radius: 50%;
+  animation: ballchange 2s ease-in-out infinite;
+}
+#ball4 {
+  background-color: cyan;
+  border: 2px solid blue;
+  width: 1.5rem;
+  color: rgb(0, 0, 0, 0);
+  height: 1.3rem;
+  border-radius: 50%;
+  position: absolute;
+  margin: 1.8rem 0 0 27rem;
+  animation: ballchange 2s ease-in-out infinite;
+}
+#ball5 {
+  background-color: cyan;
+  border: 2px solid blue;
+  width: 1.5rem;
+  color: rgb(0, 0, 0, 0);
+  height: 1.3rem;
+  border-radius: 50%;
+  animation: ballchange 2s ease-in-out infinite;
+}
+.aa {
+  background-color: blue;
+  width: 0.6rem;
+  height: 30rem;
+  border-radius: 30px;
+  margin: 1rem 0 0 35rem;
+  box-shadow: 2px 2px 5px cyan;
+  color: rgb(0, 0, 0, 0);
+  animation: colorchanger 2s ease-in infinite;
+}
+.data {
+  height: 60rem;
+}
+#part2 {
+  border: 2px solid blue;
+  color: red;
+  font-size: 20px;
+  font-weight: 550;
+  width: 28rem;
+  height: 5rem;
+  border-radius: 50px;
+  margin-left: -3rem;
+  padding-top: 1.2rem;
+  text-align: center;
+  animation: timelinechange 2s ease-in 4s infinite;
+}
+@keyframes timelinechange {
+  from {
+    background-color: none;
+    box-shadow: 2px 2px 5px #7fffd4;
+  }
+  to {
+    background-color: #7fffd4;
+    box-shadow: 2px 2px 10px #e0ffff;
+  }
+}
+#part3 {
+  border: 2px solid blue;
+  color: red;
+  font-size: 20px;
+  font-weight: 550;
+  width: 28rem;
+  height: 5rem;
+  border-radius: 50px;
+  margin: 2rem 0 0 28rem;
+  animation: timelinechange 2s ease-in 8s infinite;
+}
+@keyframes timelinechange {
+  from {
+    background-color: none;
+    box-shadow: 2px 2px 5px #7fffd4;
+  }
+  to {
+    background-color: #7fffd4;
+    box-shadow: 2px 2px 10px #e0ffff;
+  }
+}
+#part4 {
+  border: 2px solid blue;
+  color: red;
+  font-size: 20px;
+  font-weight: 550;
+  width: 28rem;
+  height: 5rem;
+  border-radius: 50px;
+  padding-top: 10px;
+  animation: timelinechange 2s ease-in 11s infinite;
+}
+@keyframes timelinechange {
+  from {
+    background-color: none;
+    box-shadow: 2px 2px 5px #7fffd4;
+  }
+  to {
+    background-color: #7fffd4;
+    box-shadow: 2px 2px 10px #e0ffff;
+  }
+}
+#part5 {
+  border: 2px solid blue;
+  color: red;
+  font-size: 20px;
+  font-weight: 550;
+  width: 28rem;
+  height: 5rem;
+  border-radius: 50px;
+  margin: 2rem 0 0 28rem;
+  animation: timelinechange 2s ease-in 15s infinite;
+}
+@keyframes timelinechange {
+  from {
+    background-color: none;
+    box-shadow: 2px 2px 5px #7fffd4;
+  }
+  to {
+    background-color: #7fffd4;
+    box-shadow: 2px 2px 10px #e0ffff;
+  }
+}
+.head-text {
+  margin: -37.5rem 0 0 27.3rem;
+  color: red;
+  font-size: 30px;
+  font-weight: 550;
+  animation: glowup 2s ease-in-out infinite;
+}
+@keyframes glowup {
+  from {
+    text-shadow: 2px 2px 2px cyan;
+  }
+  to {
+    text-shadow: 2px 2px 5px cyan;
+  }
+}

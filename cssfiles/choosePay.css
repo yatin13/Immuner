@@ -1,0 +1,87 @@
+body {
+  background-color: #b0e0e6;
+  font-family: "Roboto Slab", serif;
+  margin: 10%;
+}
+.container {
+  border: 2px solid white;
+  background-color: white;
+  margin: 0 0 0 3rem;
+  width: 88%;
+  border-radius: 30px;
+  box-shadow: 2px 2px 5px grey;
+  height: 360px;
+}
+h1 div {
+  margin-top: 2rem;
+  color: blue;
+}
+h1 {
+  display: flex;
+  gap: -50px;
+  justify-content: center;
+  text-shadow: 2px 2px 10px rgb(69, 177, 240);
+  overflow: hidden;
+}
+.wom1,
+.wom2 {
+  width: 6rem;
+  height: 10rem;
+}
+.wom2 {
+  transform: scaleX(-1);
+}
+.cart1,
+.cart2 {
+  width: 5rem;
+  height: 5rem;
+  margin-top: 4rem;
+}
+.cart1 {
+  margin-left: -1rem;
+}
+.cart2 {
+  margin-right: -1rem;
+}
+.cart2 {
+  transform: scaleX(-1);
+}
+.cash {
+  outline: 0;
+  border: 0;
+  background-color: #f5f5f5;
+  color: rgb(96, 198, 238);
+  border: 1px solid white;
+  border-radius: 30px;
+  font-size: 20px;
+  font-weight: 550;
+  height: 3rem;
+  text-align: center;
+  margin: -8rem 0 0 10rem;
+  width: 27rem;
+}
+.items1 {
+  display: flex;
+  position: absolute;
+  margin: 5rem 0 0 22%;
+  background-color: #f5f5f5;
+  color: blue;
+  font-weight: 550;
+  border-radius: 30px;
+  text-shadow: 2px 2px 10px rgb(69, 177, 240);
+}
+.items2 {
+  display: flex;
+  position: absolute;
+  margin: 5rem 0 0 42%;
+  background-color: #f5f5f5;
+  border-radius: 30px;
+  color: blue;
+  font-weight: 550;
+  text-shadow: 2px 2px 10px rgb(69, 177, 240);
+}
+.cash:hover {
+  background-color: rgb(96, 198, 238);
+  color: #f5f5f5;
+  cursor: pointer;
+}
