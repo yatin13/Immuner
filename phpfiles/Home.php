@@ -73,98 +73,38 @@ window.addEventListener('load', (event) => {
       </div>
     </div> 
    </div> 
+   <?php 
+   function renderProducts(){
+    $con=mysqli_connect("localhost","root","","imagestable");
+    $output='';
+    $sql=mysqli_query($con,'SELECT * from imagesforhome');
+    while($row=mysqli_fetch_array($sql))
+    {
+     $output.='<div class="col-sm-4">
+               <div class="card border-info" style="width: 18rem;">
+               <img src="data:image;base64,'.base64_encode($row['Img']).'" width="420" height="300" class="card-img-top" alt="...">
+               <div class="card-body text-primary">
+               <h5 class="card-title" id="pd1" >'.$row[1].'</h5>
+               <p class="card-text">'.$row[3].'</p>
+               <button class="btn btn-primary" id="btn1" data='.$row[0].'value="data:image;base64,'.base64_encode($row['Img']). '",Rs.1500, IMMUNERPROTINO">Add to Cart</button>
+               <h4 class="text-danger" id="rup1">'.$row[2].'</h4>
+               </div>
+               </div>
+               </div>';
+    }
+    return $output;
+    }
+    ?>
     <h1 class="head-spot"><span id="first">In</span> The <span id="second">Spotlight</span></h1>
-  <div class="row s">
-  <div class="col-sm-4">
-  <div class="card border-info" style="width: 18rem;">
-  <img src="../Media/spotprotein2.webp" id="img1" class="card-img-top" alt="...">
-  <div class="card-body text-primary">
-    <h5 class="card-title" id="pd1" >IMMUNER PROTINO</h5>
-    <p class="card-text">The plant-based powder contains raw greens, including kale, broccoli, and spinach, as well as superfoods such as spirulina and maca. The powder also contains brown rice, sacha inchi, and cranberry proteins, as well as all nine essential amino acids.</p>
-    <button class="btn btn-primary" id="btn1" data="1" value="../Media/spotprotein2.webp ,Rs.1500, IMMUNERPROTINO">Add to Cart</button>
-      <h4 class="text-danger" id="rup1">Rs 1500</h4>
+  <div class="row s allproduct" style='display:grid;grid-template-columns:auto auto auto;grid-gap:1rem;'>
+  <?php 
+  echo renderProducts();
+  ?>
   </div>
-</div>
-</div>
- <div class="col-sm-4">
-<div class="card border-info" style="width: 18rem;">
-  <img src="../Media/spot3.webp" id="img2" class="card-img-top" alt="...">
-  <div class="card-body text-primary">
-    <h5 class="card-title" id="pd2">IMMUNER BCAA</h5>
-    <p class="card-text">This whey protein powder is a low carb option marketed for people who want to lose weight, boost metabolism, and increase muscle tone. It contains no added sugar and is designed to help reduce sugar cravings while satisfying your sweet</p>
-    <button class="btn btn-primary" data="2" value="../Media/spot3.webp ,Rs.1500, IMMUNER BCAA" id="btn2">Add to Cart</button>
-    <h4 class="text-danger" id="rup2" >Rs 1500</h4>
-  </div>
-</div>
-</div>
-<div class="col-sm-4">
-  <div class="card border-info" style="width: 18rem;">
-  <img src="../Media/spotProtein.webp" id="img3" class="card-img-top" alt="...">
-  <div class="card-body text-primary">
-    <h5 class="card-title" id="pd3">IMMUNER WHEY</h5>
-    <p class="card-text">This protein powder gets high marks for flavor, with reviewers on Amazon noting that it lacks the bitter aftertaste common to other protein powders. The powder comes in several flavors, including cupcake batter, chocolate mousse cake, and vanilla caramel.</p>
-    <button class="btn btn-primary" id="btn3" data="3" value="../Media/spotProtein.webp ,Rs1500, IMMUNER WHEY ,">Add to Cart</button>
-    <h4 class="text-danger" id="rup3">Rs 1500</h4>
-  </div>
-</div>
-</div>
-</div> <div class="row s1">
-  <div class="col-sm-4">
-  <div class="card border-info" style="width: 18rem;">
-  <img src="../Media/spot4.webp" id="img4" class="card-img-top" alt="...">
-  <div class="card-body text-primary">
-    <h5 class="card-title" id="pd4">IMMUNER PREMIUM</h5>
-    <p class="card-text">Sourced from grass-fed, free-range cows in New Zealand, this minimally processed whey powder doesn’t contain soy, gluten, or artificial ingredients and has a low lactose content. No bovine growth hormones are used.</p>
-    <button class="btn btn-primary" id="btn4" data="4" value="../Media/spot4.webp ,Rs1500, IMMUNER PREMIUM">Add to Cart</button>
-    <h4 class="text-danger" id="rup4">Rs 1500</h4>
-  </div>
-</div>
-</div>
- <div class="col-sm-4">
-<div class="card border-info" style="width: 18rem;">
-  <img src="../Media/spot5.webp" id="img5"  class="card-img-top" alt="...">
-  <div class="card-body text-primary">
-    <h5 class="card-title" id="pd5">IMMUNER ISO-PRO</h5>
-    <p class="card-text">
-This powder contains no filler protein. It’s also a good source of calcium —578 milligrams or 45 percent of your daily recommended value (DV) per serving — which may help improve dental and bone health.</p>
-    <button class="btn btn-primary" id="btn5" data="5" value="../Media/spot5.webp ,Rs1500,IMMUNER ISO-PRO">Add to Cart</button>
-      <h4 class="text-danger" id="rup5">Rs 1500</h4>
-  </div>
-</div>
-</div>
-<div class="col-sm-4">
-  <div class="card border-info" style="width: 18rem;">
-  <img src="../Media/spot6.webp" id="img6" class="card-img-top" alt="...">
-  <div class="card-body text-primary">
-    <h5 class="card-title" id="pd6 data=">IMMUNER VEGAN</h5>
-    <p class="card-text">This egg white protein powder is free of dairy, making it a good choice for people who have a lactose intolerance. It’s also gluten-free and is extracted using a process that makes it easily digestible.</p>
-    <button class="btn btn-primary" id="btn6" data="6" value="../Media/spot6.webp ,Rs1500,IMMUNER VEGAN">Add to Cart</button>
-    <h4 class="text-danger" id="rup6">Rs 1500</h4>
-  </div>
-</div>
-</div>
-</div>
-<section class="New-Launch-Collection">
-  <h1 class="comesoon head-spot2">Coming Soon</h1>
-  <h1 class="head-spot launch">New Launch</h1>
-    <div class="card-content">
-      <div class="card w-50 border-info text-primary" style="width: 18rem;">
-        <img src="../Media/3combo.jpeg" id="imgcombo" height="250" class="card-img-top">
-        <button id="new">New</button> 
-         <div class="card-body">
-         <h5 class="card-title" id="comboprod">IMMUNER PROTINO(3 Combo)</h5>
-         <p class="card-text">This low carb powder has no added sugar or artificial flavors and is suitable for people who are vegan or who need gluten-free or dairy-free options.
-
-The powder has an earthy, naturally sweet cocoa taste and mixes well in smoothies, puddings, or drinks. It’s also available in vanilla flavor. Check out Smart 138 for recipe ideas.</p>
-         <button class="btn btn-primary" id="combobtn" data="7" value="../Media/3combo.jpeg ,Rs1500,IMMUNER PROTINO(3 Combo)">Add to Cart</button>
-         <h4 class="text-danger" id="rupcombo">Rs 1500</h4>
-        </div>
-      </div>
-    </div>
-</section>
-<section class="side-video1">
-<img class="GIF1" src="https://media2.giphy.com/media/EZ8tMlNXJ7qsaOOQAr/giphy.gif?cid=ecf05e47do3pypfbfyvlx0x3i8dyyhlwd5kic86o06diqcab&rid=giphy.gif&ct=g"/>
-<img class="GIF2" src="https://media.giphy.com/media/UrJTMKEJBjr07rBzLO/giphy.gif"/>
+<h1 class="inside">New Launch</h1>
+<section class="side-video1" style="margin-top:29rem;padding-top:1rem; display:flex;">
+<img class="GIF1" style="margin-left:10rem;"src="https://media2.giphy.com/media/EZ8tMlNXJ7qsaOOQAr/giphy.gif?cid=ecf05e47do3pypfbfyvlx0x3i8dyyhlwd5kic86o06diqcab&rid=giphy.gif&ct=g"/>
+<img class="GIF2" style="margin-left:34rem;"src="https://media.giphy.com/media/UrJTMKEJBjr07rBzLO/giphy.gif"/>
 </section>
 </section>
 <section class="insideus">
