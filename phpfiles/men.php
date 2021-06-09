@@ -20,7 +20,6 @@
     }
     .carousel
     {
-    margin-top:5rem ;
     background-color: cornsilk;  
     }
   </style>
@@ -52,69 +51,37 @@
         <img class="w3-image" src="../Media/menback3.jpeg">
       </div>
     </div>
-    <div class="row s">
-  <div class="col-sm-4">
-  <div class="card border-info" style="width: 18rem;">
-  <img src="../Media/menprod6.jpg" id="img1" class="card-img-top">
-  <div class="card-body text-primary">
-    <h5 class="card-title" id="pd1" value="IMMUNER PROTINO">IMMUNER DELUX SHAKE </h5>
-    <p class="starrating card-text"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
-    <h4 class="text-danger" id="rup1" value="Rs 1500"><s>MRP: ₹1,699</s> 
-    <br>Rs.1500 | 11% off</h4>
-    <button class="btn btn-outline-primary btn2" id="btn1" data="1" value="../Media/menprod6.jpg ,Rs1500, IMMUNER DELUX SHAKE">Add to Cart</button>
+  <?php 
+   function renderProducts(){
+    $con=mysqli_connect("localhost","root","","imagestable");
+    $output='';
+    $sql=mysqli_query($con,'SELECT * from imageformen');
+    while($row=mysqli_fetch_array($sql))
+    {
+     $output.='<div class="col-sm-4">
+               <div class="card border-info" style="width: 18rem;">
+               <img src="data:image;base64,'.base64_encode($row[3]).'" width="420" height="300" class="card-img-top" alt="...">
+               <div class="card-body text-primary">
+               <h5 class="card-title" id="pd1" >'.$row[1].'</h5>
+               <p class="card-text">'.$row[4].'</p>
+               <button class="btn btn-primary" id="btn1" data='.$row[0].'value="data:image;base64,'.base64_encode($row[3]). '",Rs.1500, IMMUNERPROTINO">Add to Cart</button>
+               <h4 class="text-danger" id="rup1">'.$row[2].'</h4>
+               </div>
+               </div>
+               </div>';
+    }
+    return $output;
+    }
+    ?>
+    <h1 class="head-spot"><span id="first">In</span> The <span id="second">Spotlight</span></h1>
+  <div class="row s allproduct" style='display:grid;grid-template-columns:auto auto auto;grid-gap:1rem;'>
+  <?php 
+  echo renderProducts();
+  ?>
   </div>
-</div>
-</div>
- <div class="col-sm-4">
-<div class="card border-info" style="width: 18rem;">
-  <img src="../Media/menprod2.webp" id="img2" class="card-img-top">
-  <div class="card-body text-primary">
-    <h5 class="card-title" id="pd2">IMMUNER THEY WHEY</h5>
-    <p class="starrating  card-text"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
-    <h4 class="text-danger" id="rup2" data="Rs 1500"><s>MRP: ₹1,349</s> 
-    <br>Rs.1111 | 17% off</h4></h4>
-    <button class="btn btn-outline-primary btn2" data="2" value="../Media/menprod2.webp ,Rs1111, IMMUNER THEY WHEY" id="btn2">Add to Cart</button>
-    </div>
-</div>
-</div>
-<div class="col-sm-4">
-  <div class="card border-info" style="width: 18rem;">
-  <img src="../Media/menprod3.png" id="img3" class="card-img-top">
-  <div class="card-body text-primary">
-    <h5 class="card-title" id="pd3">IMMUNER PROTINO ADVANCED</h5>
-    <p class="starrating card-text"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
-   <h4 class="text-danger" id="rup3"><s>MRP: ₹699</s>Rs.664 | 5% off</h4>
-    <button class="btn btn-outline-primary btn2" id="btn3" data="3" value="../Media/menprod3.png ,Rs664, IMMUNER PROTINO ADVANCED">Add to Cart</button>
-  </div>
-</div>
-</div>
-</div>
-<div class="row s">
-  <div class="col-sm-4 s1">
-  <div class="card border-info" style="width: 18rem;">
-  <img src="../Media/menprod4.webp" class="img-prod"  class="card-img-top">
-  <div class="card-body text-primary">
-    <h5 class="card-title" id="pd4" >IMMUNER BODYBULIDING</h5>
-    <p class="starrating card-text"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
-     <h4 class="text-danger" id="rup4"><s>MRP: ₹1299</s>| Rs.1240</h4>
-    <button class="btn btn-outline-primary btn2" id="btn4" data="4" value="../Media/menprod4.webp ,Rs1240, IMMUNER BODYBULIDING">Add to Cart</button>
-    </div>
-</div>
-</div>
- <div class="col-sm-4 s2">
-  <div class="card border-info" style="width: 18rem;">
-  <img src="../Media/menprod5.webp" id="img4" class="card-img-top">
-  <div class="card-body text-primary">
-    <h5 class="card-title" id="pd4" >IMMUNER LEAN SHAKE</h5>
-    <p class="starrating card-text"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
-     <h4 class="text-danger" id="rup5"><s>MRP: ₹1499</s>Rs.1375 | 8% off</h4>
-    <button class="btn btn-outline-primary btn2" id="btn4" data="5" value="../Media/menprod5.webp ,Rs1375,IMMUNER LEAN SHAKE">Add to Cart</button>
-    </div>
-</div>
-</div>
-</div>
+   
 <div class="gif">
-<h4 style="margin-left:14rem ;">Right section for fitness freaks<img src="muscles.png" width="100" height="100"/></h4>
+<h4 style="margin-left:14rem ;">Right section for fitness freaks<img src="../Media/muscles.png" width="100" height="100"/></h4>
 <img style="margin-left:14rem ;" src="https://media3.giphy.com/media/7YCC7PTNX2TOhJQ6aW/giphy.gif?cid=ecf05e47vdmwkpe1v06u7wqsdnxjfq3p7v1mobzqvfzfkdbu&rid=giphy.gif&ct=g"/>
 </div>
 <div class="diet-chart">
