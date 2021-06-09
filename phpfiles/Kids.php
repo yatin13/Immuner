@@ -55,71 +55,37 @@
         <img class="w3-image" src="../Media/kidback8.jpeg">
       </div>
     </div>
-    <div class="row s">
-  <div class="col-sm-4">
-  <div class="card border-info" style="width: 18rem;">
-  <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcT_XRV2q5b4USzL8QXqK4pNvd64D9HY3-pLVf5MSDwq70EJpi_eRiIWXtQBytIcm98LWZFCLP887UrVl6wUiAE57HwtcUWJGMhP9ogFlk3IWJa_DASGS4s&usqp=CAE" style="height:18rem ;"id="img1" class="card-img-top" alt="...">
-  <div class="card-body text-primary">
-    <h5 class="card-title" id="pd1">IMMUNER KIDS OZIVA</h5>
-    <p class="starrating card-text"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
-    <h4 class="text-danger" id="rup1"><s>MRP: ₹1,699</s> 
-    <br>Rs.1500 | 11% off</h4>
-    <button class="btn btn-outline-primary btn5" id="btn1" data="1" value="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcT_XRV2q5b4USzL8QXqK4pNvd64D9HY3-pLVf5MSDwq70EJpi_eRiIWXtQBytIcm98LWZFCLP887UrVl6wUiAE57HwtcUWJGMhP9ogFlk3IWJa_DASGS4s&usqp=CAE ,Rs1500, IMMUNER KIDS OZIVA">Add to Cart</button>
+  <?php 
+   function renderProducts(){
+    $con=mysqli_connect("localhost","root","","imagestable");
+    $output='';
+    $sql=mysqli_query($con,'SELECT * from tableforkid');
+    while($row=mysqli_fetch_array($sql))
+    {
+     $output.='<div class="col-sm-4">
+               <div class="card border-info" style="width: 18rem;">
+               <img src="data:image;base64,'.base64_encode($row[3]).'" width="420" height="300" class="card-img-top" alt="...">
+               <div class="card-body text-primary">
+               <h5 class="card-title" id="pd1" >'.$row[1].'</h5>
+               <p class="card-text">'.$row[4].'</p>
+               <button class="btn btn-primary" id="btn1" data='.$row[0].'value="data:image;base64,'.base64_encode($row[3]). '",Rs.1500, IMMUNERPROTINO">Add to Cart</button>
+               <h4 class="text-danger" id="rup1">'.$row[2].'</h4>
+               </div>
+               </div>
+               </div>';
+    }
+    return $output;
+    }
+    ?>
+  <div class="row s allproduct" style='display:grid;grid-template-columns:auto auto auto;grid-gap:1rem;'>
+  <?php 
+  echo renderProducts();
+  ?>
   </div>
-</div>
-</div>
- <div class="col-sm-4">
-<div class="card border-info" style="width: 18rem;">
-  <img src="../Media/kidprod1.webp" id="img2" style="height:18rem" data="http://127.0.0.1:5500/spot3.webp" class="card-img-top" alt="...">
-  <div class="card-body text-primary">
-    <h5 class="card-title" id="pd2" data="IMMUNER BCAA">IMMUNER PROTEIN ISOLATE</h5>
-    <p class="starrating  card-text"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
-    <h4 class="text-danger" id="rup2" data="Rs 1500"><s>MRP: ₹1,349</s> 
-    <br>Rs.1111 | 17% off</h4></h4>
-    <button class="btn btn-outline-primary btn5" data="2" value="../Media/kidprod1.webp ,Rs1111 , IMMUNER PROTEIN ISOLUTE" id="btn2">Add to Cart</button>
-    </div>
-</div>
-</div>
-<div class="col-sm-4">
-  <div class="card border-info" style="width: 18rem;">
-  <img src="../Media/kidprod2.webp" id="img3" style="height:18rem" class="card-img-top" alt="...">
-  <div class="card-body text-primary">
-    <h5 class="card-title" id="pd3">IMMUNER PLANT PROTEIN</h5>
-    <p class="starrating card-text"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
-   <h4 class="text-danger" id="rup3"><s>MRP: ₹699</s>Rs.664 | 5% off</h4>
-    <button class="btn btn-outline-primary btn5" id="btn3" data="3" value="../Media/kidprod2.webp ,Rs664 , IMMUNER PLANT PROTEIN">Add to Cart</button>
-  </div>
-</div>
-</div>
-</div>
-<div class="row s">
-  <div class="col-sm-4 s1">
-  <div class="card border-info" style="width: 18rem;">
-  <img src="../Media/kidprod3.webp" class="img-prod" style="height:18rem" class="card-img-top" alt="...">
-  <div class="card-body text-primary">
-    <h5 class="card-title" id="pd4">IMMUNER SUPER MILK</h5>
-    <p class="starrating card-text"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
-     <h4 class="text-danger" id="rup4"><s>MRP: ₹1299</s>| Rs.1240 | 4.7%</h4>
-    <button class="btn btn-outline-primary btn5" id="btn4" data="4" value="../Media/kidprod3.webp ,Rs1240, IMMUNER SUPER MILK">Add to Cart</button>
-    </div>
-</div>
-</div>
- <div class="col-sm-4 s2">
-  <div class="card border-info" style="width: 18rem;">
-  <img src="../Media/kidprod4.webp" id="img4" style="height:18rem"class="card-img-top" alt="...">
-  <div class="card-body text-primary">
-    <h5 class="card-title" id="pd4" >IMMUNER FIRST WHEY</h5>
-    <p class="starrating card-text"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
-     <h4 class="text-danger" id="rup5"><s>MRP: ₹1499</s>Rs.1375 | 8% off</h4>
-    <button class="btn btn-outline-primary btn5" id="btn4" data="4" value="../Media/kidprod4.webp ,Rs1375, IMMUNER FIRST WHEY">Add to Cart</button>
-    </div>
-</div>
-</div>
-</div>
 <div class="gif">
-<h4 style="color:green;margin-left:12rem;">Right section for Little Champs<img src="muscles.png" width="100" height="100"/></h4>
+<h4 style="color:green;margin-left:12rem;">Right section for Little Champs<img src="../Media/muscles.png" width="100" height="100"/></h4>
 <iframe src="https://giphy.com/embed/XKwWJQuBJTT8Y" style="margin-left:12rem;" width="480" height="346" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
-<img width="400" height="400" style="margin-top:-25rem;transform:translateX(-500px) ;" src="dietwomen.jpeg"> 
+<img width="400" height="400" style="margin-top:-25rem;transform:translateX(-500px) ;" src="../Media/dietwomen.jpeg"> 
 </div>
 <div class="men-text">
 <h2>Why we are great choice?</h2>  
@@ -142,7 +108,7 @@ It also consists of herbs like Ginseng, Barley Grass and Garcinia Cambogia that 
 To boost overall health, it is important to take supplements that promote heart, brain and joint health. OZiva’s Omega Multi contains vegan Omega-3 fortified with extra Olive Oil and plant-based vitamins that reduces inflammation, improves heart and brain health. It also helps build immunity.
 </div>
 <footer class="Footer-section">
-  <img class="pro" width="150" height="100" src="proteinfood.jpeg"/>
+  <img class="pro" width="150" height="100" src="../Media/proteinfood.jpeg"/>
   <div class="subs-box">
   <h4>Subscribe to our Mailing list</h4>
   <input type="text" placeholder="Enter your email">
