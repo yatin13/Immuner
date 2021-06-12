@@ -64,7 +64,7 @@
                <div class="card-body text-primary">
                <h5 class="card-title" id="pd1" >'.$row[1].'</h5>
                <p class="card-text">'.$row[4].'</p>
-               <button class="btn btn-primary" id="btn1" data='.$row[0].'value="data:image;base64,'.base64_encode($row[3]). '",Rs.1500, IMMUNERPROTINO">Add to Cart</button>
+               <button class="btn btn-primary" id="btn1" data="'.$row[0].'" value="'.$row[3].'"  data="'', ''">Add to Cart</button>
                <h4 class="text-danger" id="rup1">'.$row[2].'</h4>
                </div>
                </div>
@@ -74,7 +74,7 @@
     }
     ?>
     <h1 class="head-spot"><span id="first">In</span> The <span id="second">Spotlight</span></h1>
-  <div class="row s allproduct" style='display:grid;grid-template-columns:auto auto auto;grid-gap:1rem;'>
+  <div class="row s allproduct" style='display:grid;grid-template-columns:auto auto auto;grid-gap:1rem;margin-left:3rem;'>
   <?php 
   echo renderProducts();
   ?>
@@ -118,7 +118,7 @@ To boost overall health, it is important to take supplements that promote heart,
    © Copyright 2021 Immuner - All Rights Reserved
 </div>
 </footer>
-<script src="../jsfiles/mencart.js"></script>
+<script src="..jsfiles/mencart.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script>
 document.getElementById('arrow').addEventListener('click',()=>{
