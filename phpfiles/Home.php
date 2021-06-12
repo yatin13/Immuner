@@ -86,7 +86,7 @@ window.addEventListener('load', (event) => {
                <div class="card-body text-primary">
                <h5 class="card-title" id="pd1" >'.$row[1].'</h5>
                <p class="card-text">'.$row[3].'</p>
-               <button class="btn btn-primary" id="btn1" data='.$row[0].'value="data:image;base64,'.base64_encode($row['Img']). '",Rs.1500, IMMUNERPROTINO">Add to Cart</button>
+               <button class="btn btn-primary" id="btn1" data="'.$row[0].'" value="data:image;base64,'.base64_encode($row["Img"]).'" data2="'.$row[2].' ,'.$row[1].'">Add to Cart</button>
                <h4 class="text-danger" id="rup1">'.$row[2].'</h4>
                </div>
                </div>
@@ -96,7 +96,7 @@ window.addEventListener('load', (event) => {
     }
     ?>
     <h1 class="head-spot"><span id="first">In</span> The <span id="second">Spotlight</span></h1>
-  <div class="row s allproduct" style='display:grid;grid-template-columns:auto auto auto;grid-gap:1rem;'>
+  <div class="row s allproduct" style='display:grid;grid-template-columns:auto auto auto;grid-gap:1rem;margin-left:3rem;'>
   <?php 
   echo renderProducts();
   ?>
@@ -108,9 +108,9 @@ window.addEventListener('load', (event) => {
 </section>
 </section>
 <section class="insideus">
-<img class="mus1" src="../Media/muscles.png"/>
+<img class="mus1" src="./Media/muscles.png"/>
 <h1 class="inside">Inside Our Story</h1> 
-<img class="mus2" src="../Media/muscles.png"/> 
+<img class="mus2" src="./Media/muscles.png"/> 
 <iframe class="frame" width="560" height="315" src="https://www.youtube.com/embed/ciwXFLwo7QY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </section>
       <section class="actor-statement">
@@ -151,7 +151,7 @@ window.addEventListener('load', (event) => {
    <img width="300" height="300" src="../Media/people5.jpg"/>
   </div>
   <div class="carousel-cell">
-<img width="300" height="300" src="../Media/people6.jpg"/>
+<img width="300" height="300" src="./Media/people6.jpg"/>
   </div>
   <div class="carousel-cell">
 <img width="300" height="300" src="../Media/people7.jpg"/>
